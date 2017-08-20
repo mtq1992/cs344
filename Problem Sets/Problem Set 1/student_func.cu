@@ -53,6 +53,7 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
   int y = threadIdx.y+ blockIdx.y* blockDim.y;
   int x = threadIdx.x+ blockIdx.x* blockDim.x;
   //debug
+  // add by mtq1992
   if (y < numCols && x < numRows) {
       int index = numRows*y +x;
       uchar4 color = rgbaImage[index];
